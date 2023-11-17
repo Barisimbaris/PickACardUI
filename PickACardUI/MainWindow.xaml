@@ -1,0 +1,26 @@
+﻿<Window x:Name="Card_Pickers" x:Class="PickACardUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PickACardUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="20,20,20,20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Label Content="How many cards should ı pick?" HorizontalAlignment="Center" Margin="0,37,0,0" VerticalAlignment="Top"/>
+        <Slider x:Name="numberOfCards" HorizontalAlignment="Center" VerticalAlignment="Top" Maximum="15" Minimum="1" AutoToolTipPlacement="TopLeft" TickPlacement="BottomRight" IsSnapToTickEnabled="True" Background="Black" Width="142" Margin="0,76,0,0"/>
+        <Button Content="Pick Some Card" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="20" Click="Button_Click"/>
+        <ListBox x:Name="listOfCards" Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" FontSize="20" Margin="20,20,20,20" Grid.RowSpan="2"/>
+
+    </Grid>
+</Window>
